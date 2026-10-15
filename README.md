@@ -5,9 +5,20 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.3-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Node.js](https://img.shields.io/badge/Node.js-Express_5.3-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas_Mongoose-47A248?style=flat-square&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
-[![Deployment](https://img.shields.io/badge/Deployed-Vercel_%2B_Render-000000?style=flat-square&logo=vercel&logoColor=white)](https://vercel.com/)
+[![Frontend](https://img.shields.io/badge/Frontend-Vercel_Live-black?style=flat-square&logo=vercel&logoColor=white)](https://meal-ora-lac.vercel.app/)
+[![Backend](https://img.shields.io/badge/Backend-Render_Live-46E3B7?style=flat-square&logo=render&logoColor=black)](https://mealora-backend-vvbx.onrender.com/)
 
 **Mealora** is a high-performance, full-stack Restaurant Management and Point-of-Sale (POS) system tailored for modern culinary venues. Built with **React 19**, **Vite**, **Express 5**, and **MongoDB Atlas**, it delivers sub-second order dispatching, server-authoritative billing, real-time Kitchen Display System (KDS) synchronization, and enterprise role-based security. Visit :- https://meal-ora-lac.vercel.app/
+
+---
+
+## 🌐 Live Deployments
+
+| Component | Platform | Live URL | Status |
+| :--- | :--- | :--- | :--- |
+| **🖥️ Frontend Client** | **Vercel** | [https://meal-ora-lac.vercel.app/](https://meal-ora-lac.vercel.app/) | ![Live](https://img.shields.io/badge/Vercel-Online-success?style=flat-square&logo=vercel) |
+| **🚀 Backend API Service** | **Render** | [https://mealora-backend-vvbx.onrender.com/](https://mealora-backend-vvbx.onrender.com/) | ![Live](https://img.shields.io/badge/Render-Online-success?style=flat-square&logo=render) |
+| **🩺 API Health Endpoint** | **Render** | [https://mealora-backend-vvbx.onrender.com/api/health](https://mealora-backend-vvbx.onrender.com/api/health) | ![Health](https://img.shields.io/badge/Status-200_OK-brightgreen?style=flat-square) |
 
 ---
 

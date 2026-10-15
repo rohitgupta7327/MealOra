@@ -63,6 +63,19 @@ app.use("/api/auth", authRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/menu", menuRoutes);
 
+// Root status endpoint
+app.get("/", (req, res) => {
+  res.json({
+    status: "online",
+    app: "Mealora POS & Restaurant Terminal API",
+    version: "2.4.0",
+    frontend: "https://meal-ora-lac.vercel.app/",
+    healthcheck: "/api/health",
+    repository: "https://github.com/rohitgupta7327/MealOra",
+    time: new Date().toISOString(),
+  });
+});
+
 // Root healthcheck
 app.get("/api/health", (req, res) => {
   res.json({
