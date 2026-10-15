@@ -7,7 +7,7 @@
 [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas_Mongoose-47A248?style=flat-square&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
 [![Deployment](https://img.shields.io/badge/Deployed-Vercel_%2B_Render-000000?style=flat-square&logo=vercel&logoColor=white)](https://vercel.com/)
 
-**Mealora** is a high-performance, full-stack Restaurant Management and Point-of-Sale (POS) system tailored for modern culinary venues. Built with **React 19**, **Vite**, **Express 5**, and **MongoDB Atlas**, it delivers sub-second order dispatching, server-authoritative billing, real-time Kitchen Display System (KDS) synchronization, and enterprise role-based security.
+**Mealora** is a high-performance, full-stack Restaurant Management and Point-of-Sale (POS) system tailored for modern culinary venues. Built with **React 19**, **Vite**, **Express 5**, and **MongoDB Atlas**, it delivers sub-second order dispatching, server-authoritative billing, real-time Kitchen Display System (KDS) synchronization, and enterprise role-based security. Visit :- https://meal-ora-lac.vercel.app/
 
 ---
 
