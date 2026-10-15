@@ -25,6 +25,13 @@ export async function seedDefaultUsers() {
       role: "admin",
       avatar: "JD",
     },
+    {
+      name: "John Guest",
+      email: "john@gmail.com",
+      password: "123456",
+      role: "staff",
+      avatar: "JG",
+    },
   ];
 
   const dbConnected = mongoose.connection.readyState === 1;

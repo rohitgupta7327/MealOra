@@ -21,6 +21,22 @@ export async function seedDatabase() {
   } else {
     console.log("ℹ [Database Seed] Owner account already present.");
   }
+
+  // Ensure default demo staff/guest account exists
+  const existingStaff = await User.findOne({ email: "john@gmail.com" });
+  if (!existingStaff) {
+    const staffUser = new User({
+      name: "John Guest",
+      email: "john@gmail.com",
+      password: "123456",
+      role: "staff",
+      avatar: "JG",
+    });
+    await staffUser.save();
+    console.log(" [Database Seed] Seeded default staff/guest: john@gmail.com");
+  } else {
+    console.log("ℹ [Database Seed] Staff/Guest account already present.");
+  }
 }
 
 // Allow direct execution: `node Database/seeds/seedData.js`

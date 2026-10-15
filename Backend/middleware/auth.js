@@ -14,7 +14,7 @@ export function authenticateToken(req, res, next) {
     return res.status(401).json({
       success: false,
       error: "AUTH_REQUIRED",
-      message: "Access denied. Authentication token missing. Please sign in.",
+      message: "Access denied. Please sign in.",
     });
   }
 

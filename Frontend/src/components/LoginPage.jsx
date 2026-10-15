@@ -232,16 +232,36 @@ export default function LoginPage({ onLoginSuccess, theme = "dark", onToggleThem
               )}
             </button>
 
-            {/* Admin-controlled notice */}
-            <div className="pt-2 text-center">
+            {/* Quick Demo Credentials */}
+            <div className="pt-2 text-center space-y-2">
               <p className="text-[11px] text-[#736357] dark:text-[#9c8e84]">
                 Staff and Admin accounts are managed by the Restaurant Owner.
               </p>
-              <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-amber-500/10 border border-amber-500/20 text-[10px] text-amber-800 dark:text-amber-300">
-                <span>Predefined Owner:</span>
-                <span className="font-mono font-bold">admin@mealora.com</span>
-                <span>•</span>
-                <span className="font-mono font-bold">admin123</span>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setEmail("admin@mealora.com");
+                    setPassword("admin123");
+                  }}
+                  className="px-2.5 py-1 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-[10px] text-amber-800 dark:text-amber-300 transition-colors cursor-pointer"
+                  title="Click to autofill Admin credentials"
+                >
+                  <span className="font-semibold">👑 Admin:</span>{" "}
+                  <span className="font-mono">admin@mealora.com</span> • <span className="font-mono">admin123</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setEmail("John@gmail.com");
+                    setPassword("123456");
+                  }}
+                  className="px-2.5 py-1 rounded-lg bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/30 text-[10px] text-blue-800 dark:text-blue-300 transition-colors cursor-pointer"
+                  title="Click to autofill Guest / Staff credentials"
+                >
+                  <span className="font-semibold">👤 Guest / Staff:</span>{" "}
+                  <span className="font-mono">John@gmail.com</span> • <span className="font-mono">123456</span>
+                </button>
               </div>
             </div>
           </form>
