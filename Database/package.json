@@ -1,0 +1,11 @@
+{
+  "name": "mealora-database",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "mongoose": "^9.11.2"
+  }
+}
