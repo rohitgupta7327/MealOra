@@ -2,9 +2,8 @@ import React from "react";
 import {
   ShoppingBag,
   CheckCircle2,
-  DollarSign,
+  IndianRupee,
   Flame,
-  TrendingUp,
   ArrowUpRight,
 } from "lucide-react";
 
@@ -39,13 +38,13 @@ function AnalyticsCards({
     },
     {
       title: "Daily Sales Revenue",
-      value: `$${dailyRevenue.toLocaleString("en-US", {
+      value: `₹${dailyRevenue.toLocaleString("en-IN", {
         minimumFractionDigits: 2,
         maximumFractionDigits: 2,
       })}`,
       trend: "+18.2% vs target",
       trendPositive: true,
-      icon: DollarSign,
+      icon: IndianRupee,
       accentColor: "from-amber-500/20 to-yellow-500/10",
       iconColor: "text-amber-700 dark:text-amber-300",
       borderColor: "hover:border-amber-400/40",

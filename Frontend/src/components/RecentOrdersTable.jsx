@@ -11,7 +11,6 @@ const STATUS_OPTIONS = ["All", "Pending", "Preparing", "Ready", "Completed"];
 function RecentOrdersTable({
   orders = [],
   onViewOrder,
-  onUpdateStatus,
 }) {
   const [statusFilter, setStatusFilter] = useState("All");
 
@@ -159,7 +158,7 @@ function RecentOrdersTable({
                   {/* Total Amount & Recorded Payment Method */}
                   <td className="py-3.5 px-3">
                     <span className="font-mono text-sm font-bold text-amber-700 dark:text-amber-400">
-                      ${order.total.toFixed(2)}
+                      ₹{order.total.toFixed(2)}
                     </span>
                     <span className="block text-[10px] text-[#736357] dark:text-[#9c8e84] font-medium mt-0.5">
                       {order.paymentMethod || "Cash"}

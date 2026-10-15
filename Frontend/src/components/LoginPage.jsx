@@ -16,6 +16,8 @@ import {
 } from "lucide-react";
 import authService from "../services/authService";
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 export default function LoginPage({ onLoginSuccess, theme = "dark", onToggleTheme }) {
   const isDark = theme === "dark";
 
@@ -275,7 +277,7 @@ export default function LoginPage({ onLoginSuccess, theme = "dark", onToggleThem
       <footer className="w-full max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[#736357] dark:text-[#9e8f82] relative z-10">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-          <span>© {new Date().getFullYear()} Mealora. All rights reserved.</span>
+          <span>© {CURRENT_YEAR} Mealora. All rights reserved.</span>
         </div>
         <div className="flex items-center gap-1.5 font-medium">
           <span>Built by</span>

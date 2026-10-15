@@ -60,7 +60,7 @@ export default function TeamManagementModal({ isOpen, onClose, currentUser, show
     setIsSubmitting(true);
 
     try {
-      const res = await authService.addMember({ name, email, password, role });
+      await authService.addMember({ name, email, password, role });
       setSuccessMsg(`Member '${name}' created successfully as ${role.toUpperCase()} in MongoDB!`);
       if (showToast) {
         showToast(`Team member ${name} created successfully.`);

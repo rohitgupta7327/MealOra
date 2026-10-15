@@ -4,9 +4,6 @@ import {
   Flame,
   CheckCircle2,
   Clock,
-  ArrowRight,
-  Utensils,
-  AlertTriangle,
 } from "lucide-react";
 
 export default function KitchenOrdersView({ orders = [], onUpdateStatus }) {

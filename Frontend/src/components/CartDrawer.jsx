@@ -276,7 +276,7 @@ function CartDrawer({
                       )}
                     </div>
                     <span className="text-[11px] font-mono text-[#736357] dark:text-[#8a7c72] mt-0.5 inline-block">
-                      ${item.price.toFixed(2)} each
+                      ₹{item.price.toFixed(2)} each
                     </span>
                   </div>
 
@@ -285,7 +285,7 @@ function CartDrawer({
                     className={`font-mono text-xs font-bold ${isOutOfStock ? "text-red-600 dark:text-red-400 line-through" : "text-amber-700 dark:text-amber-400"
                       }`}
                   >
-                    ${(item.price * item.quantity).toFixed(2)}
+                    ₹{(item.price * item.quantity).toFixed(2)}
                   </span>
                 </div>
 
@@ -375,7 +375,7 @@ function CartDrawer({
         <div className="flex items-center justify-between text-[#736357] dark:text-[#a89b91]">
           <span>Subtotal</span>
           <span className="font-mono text-[#1c1613] dark:text-[#f5f2eb] font-semibold">
-            ${subtotal.toFixed(2)}
+            ₹{subtotal.toFixed(2)}
           </span>
         </div>
 
@@ -384,7 +384,7 @@ function CartDrawer({
           <div className="flex items-center justify-between text-emerald-700 dark:text-emerald-400">
             <span>Discount ({discountPercent}%)</span>
             <span className="font-mono font-semibold">
-              -${discountAmount.toFixed(2)}
+              -₹{discountAmount.toFixed(2)}
             </span>
           </div>
         )}
@@ -392,10 +392,10 @@ function CartDrawer({
         {/* Tax (5%) */}
         <div className="flex items-center justify-between text-[#736357] dark:text-[#a89b91]">
           <span className="flex items-center gap-1">
-            Tax <span className="text-[10px] text-[#8c786c] dark:text-[#6b5f56]">(5% Sales VAT)</span>
+            Tax <span className="text-[10px] text-[#8c786c] dark:text-[#6b5f56]">(5% GST / VAT)</span>
           </span>
           <span className="font-mono text-[#1c1613] dark:text-[#f5f2eb] font-semibold">
-            ${tax.toFixed(2)}
+            ₹{tax.toFixed(2)}
           </span>
         </div>
 
@@ -408,7 +408,7 @@ function CartDrawer({
             <span className="text-[10px] text-[#8c786c] dark:text-[#6b5f56]">Includes all taxes</span>
           </div>
           <span className="font-mono text-2xl font-black text-amber-600 dark:text-[#f59e0b] drop-shadow-sm">
-            ${finalTotal.toFixed(2)}
+            ₹{finalTotal.toFixed(2)}
           </span>
         </div>
       </div>
@@ -487,7 +487,7 @@ function CartDrawer({
           ) : (
             <>
               <Send className="w-4 h-4 stroke-[2.5]" />
-              <span>Place Order (${finalTotal.toFixed(2)})</span>
+              <span>Place Order (₹{finalTotal.toFixed(2)})</span>
             </>
           )}
         </button>

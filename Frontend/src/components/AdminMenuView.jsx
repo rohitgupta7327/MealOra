@@ -287,7 +287,7 @@ export default function AdminMenuView({
                     </td>
 
                     <td className="py-3 px-4 font-mono font-bold text-amber-700 dark:text-amber-400">
-                      ${Number(item.price).toFixed(2)}
+                      ₹{Number(item.price).toFixed(2)}
                     </td>
 
                     <td className="py-3 px-4 text-[#736357] dark:text-[#9c8e84]">
@@ -432,14 +432,14 @@ export default function AdminMenuView({
 
                 <div>
                   <label className="block text-[#736357] dark:text-[#a89b91] mb-1 font-semibold">
-                    Price ($) *
+                    Price (₹) *
                   </label>
                   <input
                     type="number"
                     step="0.01"
                     min="0"
                     required
-                    placeholder="24.50"
+                    placeholder="250.00"
                     value={newItem.price}
                     onChange={(e) => setNewItem({ ...newItem, price: e.target.value })}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-[#faf7f2] dark:bg-[#141110] border border-[#ded5ca] dark:border-[#2e2723] text-[#1c1613] dark:text-[#f5f2eb] focus:border-amber-500 focus:outline-none font-mono font-medium text-xs"
@@ -701,7 +701,7 @@ export default function AdminMenuView({
 
                 <div>
                   <label className="block text-[#736357] dark:text-[#a89b91] mb-1 font-semibold">
-                    Price ($) *
+                    Price (₹) *
                   </label>
                   <input
                     type="number"

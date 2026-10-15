@@ -1,16 +1,11 @@
 import React from "react";
 import {
-  TrendingUp,
   CreditCard,
   Award,
-  Clock,
-  ArrowUpRight,
   PieChart,
-  ShoppingBag,
-  CheckCircle2,
 } from "lucide-react";
 
-export default function DashboardOverview({ orders = [], menuItems = [] }) {
+export default function DashboardOverview() {
   const topDishes = [
     { name: "Gourmet Cheeseburger", orders: 48, revenue: 600.0, category: "Burgers" },
     { name: "Wood-Fired Margherita", orders: 36, revenue: 522.0, category: "Mains" },
@@ -20,8 +15,8 @@ export default function DashboardOverview({ orders = [], menuItems = [] }) {
   ];
 
   const channelStats = [
-    { channel: "Dine-In Orders", percentage: "58%", orders: "70 orders", amount: "$861.50" },
-    { channel: "Takeaway Orders", percentage: "42%", orders: "50 orders", amount: "$624.00" },
+    { channel: "Dine-In Orders", percentage: "58%", orders: "70 orders", amount: "₹861.50" },
+    { channel: "Takeaway Orders", percentage: "42%", orders: "50 orders", amount: "₹624.00" },
   ];
 
   const paymentBreakdown = [
@@ -55,7 +50,7 @@ export default function DashboardOverview({ orders = [], menuItems = [] }) {
               Average Ticket
             </span>
             <span className="font-mono text-base font-bold text-amber-700 dark:text-amber-400">
-              $38.45
+              ₹38.45
             </span>
           </div>
           <div className="px-3.5 py-2 rounded-xl bg-[#f4efe8] dark:bg-[#141110] border border-[#ded5ca] dark:border-[#2e2723] text-right">
@@ -103,7 +98,7 @@ export default function DashboardOverview({ orders = [], menuItems = [] }) {
                     {dish.orders} orders
                   </span>
                   <span className="block font-mono text-[11px] text-amber-700 dark:text-amber-400 font-semibold">
-                    ${dish.revenue.toFixed(2)}
+                    ₹{dish.revenue.toFixed(2)}
                   </span>
                 </div>
               </div>

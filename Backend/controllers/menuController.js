@@ -90,7 +90,7 @@ export async function createMenuItem(req, res) {
 
     const savedDish = await newDish.save();
 
-    console.log(`✨ [Menu] New dish created: #${savedDish.itemId} "${savedDish.name}" ($${savedDish.price})`);
+    console.log(`✨ [Menu] New dish created: #${savedDish.itemId} "${savedDish.name}" (₹${savedDish.price})`);
 
     const formatted = {
       ...savedDish.toObject(),

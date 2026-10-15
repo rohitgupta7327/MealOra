@@ -20,6 +20,8 @@ import {
 } from "./data/mockData";
 import { CheckCircle2, X, Lock } from "lucide-react";
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 export default function App() {
   // Theme State with LocalStorage Persistence
   const [theme, setTheme] = useState(() => {
@@ -211,7 +213,7 @@ export default function App() {
   const [isTeamModalOpen, setIsTeamModalOpen] = useState(false);
 
   // Menu & Category State
-  const [categories, setCategories] = useState(INITIAL_CATEGORIES);
+  const [categories] = useState(INITIAL_CATEGORIES);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [menuItems, setMenuItems] = useState(INITIAL_MENU_ITEMS);
@@ -349,7 +351,7 @@ export default function App() {
         setCartItems([]);
         setOrderSequence((prev) => prev + 1);
         showToast(
-          `Order ${serverOrder.orderNumber} placed & verified in MongoDB ($${serverOrder.finalTotal.toFixed(2)} • ${serverOrder.paymentMethod})! Ticket sent to Kitchen.`
+          `Order ${serverOrder.orderNumber} placed & verified in MongoDB (₹${serverOrder.finalTotal.toFixed(2)} • ${serverOrder.paymentMethod})! Ticket sent to Kitchen.`
         );
       } catch (err) {
         // Safe fallback in case backend is offline
@@ -375,7 +377,7 @@ export default function App() {
         setCartItems([]);
         setOrderSequence((prev) => prev + 1);
         showToast(
-          `Order ${orderData.orderNumber} saved locally ($${fallbackOrder.total.toFixed(2)}).`
+          `Order ${orderData.orderNumber} saved locally (₹${fallbackOrder.total.toFixed(2)}).`
         );
       }
     },
@@ -600,7 +602,7 @@ export default function App() {
 
         {/* Tab Specific Views */}
         {activeTab === "Dashboard" && (
-          <DashboardOverview orders={orders} menuItems={menuItems} />
+          <DashboardOverview />
         )}
 
         {activeTab === "POS Terminal" && (
@@ -646,7 +648,6 @@ export default function App() {
             <RecentOrdersTable
               orders={orders}
               onViewOrder={(order) => setSelectedOrderForModal(order)}
-              onUpdateStatus={handleUpdateOrderStatus}
             />
           </div>
         )}
@@ -698,7 +699,7 @@ export default function App() {
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
             <span className="font-medium text-[#1c1613] dark:text-[#f5f2eb]">
-              © {new Date().getFullYear()} Mealora. All rights reserved.
+              © {CURRENT_YEAR} Mealora. All rights reserved.
             </span>
           </div>
           <div className="flex items-center gap-1.5 font-medium">

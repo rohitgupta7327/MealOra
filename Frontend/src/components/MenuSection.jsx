@@ -111,7 +111,7 @@ const MenuItemCard = React.memo(function MenuItemCard({
               Price
             </span>
             <span className="font-mono text-base font-extrabold text-[#f59e0b]">
-              ${item.price.toFixed(2)}
+              ₹{item.price.toFixed(2)}
             </span>
           </div>
 

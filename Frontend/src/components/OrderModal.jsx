@@ -111,12 +111,12 @@ export default function OrderModal({ order, onClose, onUpdateStatus, onUpdatePay
                           {item.name}
                         </span>
                         <span className="block text-[10px] text-[#8c786c] dark:text-[#7d6f65] font-mono">
-                          ${item.price.toFixed(2)} each
+                          ₹{item.price.toFixed(2)} each
                         </span>
                       </div>
                     </div>
                     <span className="font-mono font-bold text-[#1c1613] dark:text-[#f5f2eb]">
-                      ${(item.price * item.quantity).toFixed(2)}
+                      ₹{(item.price * item.quantity).toFixed(2)}
                     </span>
                   </div>
                 ))
@@ -181,7 +181,7 @@ export default function OrderModal({ order, onClose, onUpdateStatus, onUpdatePay
             <div className="flex justify-between text-[#736357] dark:text-[#8a7c72] pt-1">
               <span>Total Price</span>
               <span className="font-mono font-bold text-amber-600 dark:text-amber-400 text-base">
-                ${order.total.toFixed(2)}
+                ₹{order.total.toFixed(2)}
               </span>
             </div>
           </div>
