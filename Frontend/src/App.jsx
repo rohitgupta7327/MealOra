@@ -692,15 +692,18 @@ export default function App() {
           ))}
       </main>
 
-      {/* Footer / Status bar */}
-      <footer className="mt-auto border-t border-[#e6ddd3] dark:border-[#231d19] bg-[#faf7f2] dark:bg-[#141110] py-3 px-6 text-center text-xs text-[#736357] dark:text-[#7d6f65] transition-colors duration-200">
+      {/* Footer */}
+      <footer className="mt-auto border-t border-[#e6ddd3] dark:border-[#231d19] bg-[#faf7f2] dark:bg-[#141110] py-3.5 px-6 text-xs text-[#736357] dark:text-[#9e8f82] transition-colors duration-200">
         <div className="max-w-[1720px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span className="font-medium text-[#1c1613] dark:text-[#f5f2eb]">Mealora POS v2.4 • Main Terminal • Terminal ID: #POS-01</span>
+            <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span className="font-medium text-[#1c1613] dark:text-[#f5f2eb]">
+              © {new Date().getFullYear()} Mealora. All rights reserved.
+            </span>
           </div>
-          <div>
-            Built with React, Vite & Tailwind CSS • Adaptive Warm Dining Theme
+          <div className="flex items-center gap-1.5 font-medium">
+            <span>Built by</span>
+            <span className="text-[#a85122] dark:text-[#e87a38] font-semibold">Rohit</span>
           </div>
         </div>
       </footer>

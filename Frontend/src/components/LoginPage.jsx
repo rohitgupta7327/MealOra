@@ -271,14 +271,15 @@ export default function LoginPage({ onLoginSuccess, theme = "dark", onToggleThem
 
       </main>
 
-      {/* Footer Status Bar */}
-      <footer className="w-full max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[#736357] dark:text-[#8c7e73] relative z-10">
+      {/* Footer */}
+      <footer className="w-full max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-[#736357] dark:text-[#9e8f82] relative z-10">
         <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span>Authentication Service Online • Port 5000</span>
+          <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span>© {new Date().getFullYear()} Mealora. All rights reserved.</span>
         </div>
-        <div>
-          Protected by JWT Session Tokens & Salted bcrypt Hashes • MongoDB Credential Store
+        <div className="flex items-center gap-1.5 font-medium">
+          <span>Built by</span>
+          <span className="text-[#a85122] dark:text-[#e87a38] font-semibold">Rohit</span>
         </div>
       </footer>
 
